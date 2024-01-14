@@ -6,8 +6,10 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Конструктор памятников</title>
-  <link rel="stylesheet" href="libs/nice-select/jquery.nice-select.min.css">
-  <link rel='stylesheet' href='css/styles.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bitrix/js_libs/nice-select/jquery.nice-select.min.css">
+  <link rel="stylesheet" href="bitrix/js_libs/sweetalert2/sweetalert2.min.css">
+  <link rel='stylesheet' href='bitrix/css/constructor.v2/styles.css'>
 </head>
 <body>
 
@@ -27,17 +29,17 @@
           <div class="kit_container">
           <div class="kit">
             <div class="kit_content">
-              <div id="pokritiye"><img src="images/i02.png">  </div>
-              <div id="zokol">    <img src="images/z00.png">  </div>
-              <div id="hograda">  <img src="images/h00.png">  </div>
-              <div id="tumba">    <img src="images/b01.png">  </div>
-              <div id="stella">   <img src="images/stella/a01p0pmg.png">  </div>
-              <div id="tzvet">    <img src="images/c00.png">  </div>
-              <div id="nadgrob">  <img src="images/d00.png">  </div>
-              <div id="vaza">     <img src="images/j00.png">  </div>
-              <div id="risynki">  <img src="images/ris/r00.png">  </div>
-              <div id="krest">    <img src="images/krest/k00.png">  </div>
-              <div id="epitaph">  <img src="images/ep/e00.png"> </div>
+              <div id="pokritiye"><img src="bitrix/images/constructor.v2/i02.png">  </div>
+              <div id="zokol">    <img src="bitrix/images/constructor.v2/z00.png">  </div>
+              <div id="hograda">  <img src="bitrix/images/constructor.v2/h00.png">  </div>
+              <div id="tumba">    <img src="bitrix/images/constructor.v2/b01.png">  </div>
+              <div id="stella">   <img src="bitrix/images/constructor.v2/stella/a01p0pmg.png">  </div>
+              <div id="tzvet">    <img src="bitrix/images/constructor.v2/c00.png">  </div>
+              <div id="nadgrob">  <img src="bitrix/images/constructor.v2/d00.png">  </div>
+              <div id="vaza">     <img src="bitrix/images/constructor.v2/j00.png">  </div>
+              <div id="risynki">  <img src="bitrix/images/constructor.v2/ris/r00.png">  </div>
+              <div id="krest">    <img src="bitrix/images/constructor.v2/krest/k00.png">  </div>
+              <div id="epitaph">  <img src="bitrix/images/constructor.v2/ep/e00.png"> </div>
             </div>
           </div>
           <div class="kit_desc">
@@ -63,14 +65,43 @@
             <div class="kit_select" data-container="hograda"></div>
             <div class="kit_select" data-container="hogradacolor"></div>
           </div>
-          <button class="kit_submit">Отправить менеджеру</button>
+          <div class="kit_group">
+            <div class="kit_input">
+              <label class="kit_label" for="epitaph_text">Текст эпитафии</label>
+              <input name="epitaph_text" id="epitaph_text" data-name="dasdsa" placeholder="Введите текст эпитафии" disabled>
+            </div>
+          </div>
+          <button data-bs-toggle="modal" data-bs-target="#modal_send" class="kit_submit">Отправить менеджеру</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="modal" id="modal_send" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="form_send">
+          <div class="modal-header">
+            <h5 class="modal-title">Введите ваши данные</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input name="name" class="form-control mb-2" placeholder="Ваше имя" required>
+            <input name="email" type="email" class="form-control mb-2" placeholder="Ваш email" required>
+            <input name="phone" class="form-control mb-2" placeholder="Ваш телефон">
+            <input name="desc" class="form-control mb-2" placeholder="Примечание">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="kit_submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-<script src="libs/jquery-3.7.1.min.js"></script>
-<script src="libs/nice-select/jquery.nice-select.min.js"></script>
-<script src='js/constructor.js'></script>
+<script src="bitrix/js_libs/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="bitrix/js_libs/nice-select/jquery.nice-select.min.js"></script>
+<script src="bitrix/js_libs/sweetalert2/sweetalert2.all.min.js"></script>
+<script src='bitrix/js/constructor.v2/scripts.js'></script>
 </body>
 </html>
